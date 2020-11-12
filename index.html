@@ -1,4 +1,3 @@
-  
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
@@ -7,7 +6,7 @@
     <title>Unity WebGL Player | FFETM1_Listen</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/FFET_M1_Listen.json");
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/FFET_M1_Listen.json", {onProgress: UnityProgress});
     </script>
 	<script type="text/javascript">
       // when a message is received from the page code
@@ -28,4 +27,4 @@
   <body>
     <div id="unityContainer" style="width: 836px; height: 257px; margin: auto"></div>
   </body>
-</html
+</html>
