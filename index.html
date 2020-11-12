@@ -20,12 +20,12 @@
 
       // send message to the page code
       function aFunctionImplementedInHtmlFile(jsString) {
-		unityInstance.SendMessage('infoLoader', 'SetEmail', userEmail)
+	  if(userEmail != ""){
+		unityInstance.SendMessage('infoLoader', 'SetEmail', userEmail);
+		}else{
+			aFunctionImplementedInHtmlFile(jsString);
+		}
       }
-		
-			  function ready(){
-		window.parent.postMessage({"type":"ready"}, "*");
-	  }
     </script>
   </head>
   <body>
