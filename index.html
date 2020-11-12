@@ -22,6 +22,10 @@
       function aFunctionImplementedInHtmlFile(jsString) {
 		unityInstance.SendMessage('infoLoader', 'SetEmail', userEmail)
       }
+		
+			  function ready(){
+		window.parent.postMessage({"type":"ready"}, "*");
+	  }
     </script>
   </head>
   <body>
