@@ -6,24 +6,7 @@
     <title>Unity WebGL Player | FFETM1_Listen</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/BUILDS.json");
-    </script>
-	</script>
-	<script type="text/javascript">
-      // when a message is received from the page code
-      var userEmail;
-      window.onmessage = (event) => {
-        if (event.data) {
-          //document.getElementById("theLabel").innerHTML = event.data;
-          userEmail = event.data;
-		  unityInstance.SendMessage('infoLoader', 'SetEmail', userEmail);
-        }
-      };
-
-      // send message to the page code
-      function aFunctionImplementedInHtmlFile(jsString) {
-		window.parent.postMessage(jsString, "*");
-      }
+      UnityLoader.instantiate("unityContainer", "Build/BUILDS.json");
     </script>
   </head>
   <body>
